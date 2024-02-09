@@ -10,8 +10,10 @@ def get_negative_pixel(pixel):
     return tuple(negative_pixel)
 
 
+IMAGE_TO_BE_CONVERTED_NAME = "image.jpg"
+NEGATIVE_IMAGE_NAME = "converted.png"
 print("Starting")
-image = Image.open("image.jpg")
+image = Image.open(IMAGE_TO_BE_CONVERTED_NAME)
 negative_image = Image.new(image.mode, image.size)
 width, height = image.size
 for y in range(height):
@@ -19,7 +21,7 @@ for y in range(height):
         pixel = image.getpixel((x, y))
         negative_pixel = get_negative_pixel(pixel)
         negative_image.putpixel((x, y), negative_pixel)
-negative_image.save("converted.png")
+negative_image.save(NEGATIVE_IMAGE_NAME)
 negative_image.close()
 image.close()
 print("Completed")
