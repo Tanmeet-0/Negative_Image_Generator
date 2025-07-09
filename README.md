@@ -1,6 +1,6 @@
-# Negative Image Converter
+# Negative Image Generator
 
-A python program that converts a image into a negative image.
+A python program that generates a negative image of an image.
 
 A negative image is an image in which the darkest areas appear light and the lightest area appear dark.
 
